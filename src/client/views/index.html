@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Philosopher&display=swap" rel="stylesheet">
+    <title>Travel app</title>
+</head>
+<body>
+    <main id="app">
+        <header class="holder">
+            <h1 id="headline">Travel App</h1>
+        </header>
+        <!-- result for the user-->
+        <section id="container" class="card hidden">
+            <div id="tripDataContainer">
+                <img id="destination-img" class="hidden" src="" />
+                <div id="tripInfo">
+                    <div id="location-header"></div>
+                    <div id="departure-date"></div>
+                    
+                    <div id="information">
+                        <h3>Weather Forecast:</h3>
+                        <div id="highTemp" class="temp"></div>
+                        <div id="lowTemp" class="temp"></div>
+                        <div id="weather-forecast">
+                            <img id="weatherCloud" class="inline" src="" width="50" height="50" />
+                            <div id="weather-forecast" class="inline"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- user input -->
+        <section class="data-container holder">
+            <form>
+                <input id="cityName" type="text" name="input" placeholder="City" required>
+                <input id="travelDate" type="date" name="input" placeholder="Enter your trip date" required>
+                <input type="submit" name="submit" id="submit" value="Explore">
+            </form>
+            <div id="error-info" class="hidden"></div>
+        </section>
+    </main>
+
+    <!-- footer of the page -->
+    <footer id="footer"><label id="footer-h">Travel The World</label></footer>
+    
+    <script>
+        //check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            //use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+</html>
