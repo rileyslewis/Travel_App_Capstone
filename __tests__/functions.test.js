@@ -39,8 +39,6 @@ describe('retrievePixabayApi', () => {
 
 
 // handlers / errors
-
-
 describe('presentDate', () => {
     test('add 0', () => {
         Date.prototype.addDays = function(days) {
@@ -49,7 +47,7 @@ describe('presentDate', () => {
         return date;
         };
 
-        expect(presentDate()).toEqual('2020-05-05');
+        expect(presentDate()).toEqual('2020-04-21');
     });
     test('add 6', () => {
         
@@ -60,7 +58,7 @@ describe('presentDate', () => {
             return date;
         };
 
-        expect(presentDate(6)).toEqual('2020-05-11');
+        expect(presentDate(6)).toEqual('2020-04-27');
     });
 });
 
