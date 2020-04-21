@@ -8,15 +8,16 @@
     <title>Travel app</title>
 </head>
 <body>
-    <main id="app">
-        <header class="holder">
-            <h1 id="headline">Travel App</h1>
-        </header>
-        <!-- result for the user-->
-        <section id="container" class="card hidden">
+    <header class="bg-header">
+        <div id="headline">Travel App</div>
+    </header>
+    <main class="app">
+        
+        <section id="container" class="box hidden">
             <div id="tripDataContainer">
                 <img id="destination-img" class="hidden" src="" />
                 <div id="tripInfo">
+                    <label>The Details</label>
                     <div id="location-header"></div>
                     <div id="departure-date"></div>
                     
@@ -34,18 +35,21 @@
         </section>
 
         <!-- user input -->
-        <section class="data-container holder">
+        <section class="data-container holder box">
             <form>
+                <label>Destination:</label>
                 <input id="cityName" type="text" name="input" placeholder="City" required>
+                <label>Departure:</label>
                 <input id="travelDate" type="date" name="input" placeholder="Enter your trip date" required>
-                <input type="submit" name="submit" id="submit" value="Explore">
+                <lable></lable>
+                <input type="submit" name="submit" id="submit" class="style-button" value="Explore">
             </form>
             <div id="error-info" class="hidden"></div>
         </section>
+        <footer id="footer"><label id="footer-h">Travel The World</label></footer>
+
     </main>
 
-    <!-- footer of the page -->
-    <footer id="footer"><label id="footer-h">Travel The World</label></footer>
     
     <script>
         //check that service workers are supported
